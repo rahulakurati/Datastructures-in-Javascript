@@ -1,0 +1,35 @@
+Write a function to get Nth node in a Linked List
+Write a GetNth() function that takes a linked list and an integer index and returns the data value stored in the node at that index position.
+index starts with 0
+0-returns head ptr
+should loop till the specified index position to get that value
+handle out of bound error by validating with count
+
+function getN(index)
+{
+	if(index > this.count)
+		return -1;
+	var current = this.head;
+	for(var i=1;i<=index;i++)
+	{
+		current = current.next;
+	}
+	return current;
+}
+
+Write a C function to print the middle of a given linked list
+using single iteration
+use 2 ptrs, one fast and one slow
+
+function middle(head)
+{
+	var current = head;
+	var slow = current.next;
+	var fast = current.next.next;
+	while(fast.next != null || fast.next.next != null)
+	{
+		slow = slow.next;
+		fast = fast.next.next;
+	}
+	return slow;
+}
