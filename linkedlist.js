@@ -3,6 +3,7 @@ function node(data){
 	this.next = null;
 }
 
+
 //definition
 function linkedList() {
 	this.head 	= new Node("head");
@@ -10,6 +11,7 @@ function linkedList() {
 	this.insert	= insert;
 	this.remove = remove;
 	this.show 	= show;
+	this.length = length;
 }
 
 //searches for the node having the data
@@ -40,4 +42,13 @@ function show(){
 	var current	= this.head;
 	while(current != null)
 		console.log(current.data);
+}
+
+function length(){
+	var count	= 0;
+	var current	= this.head;
+	while(current != null)
+		count++;
+
+	return count;
 }
